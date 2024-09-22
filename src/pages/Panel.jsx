@@ -19,8 +19,11 @@ const Panel = () => {
   return (
     <div className="min-h-screen flex flex-col items-center">
       <img src={logo} className="w-40 mx-auto pt-5" alt="Logo" />
-      <p className="text-3xl font-semibold mt-1 text-center text-gray-800">
-        Kontrol Paneli
+      <p className="text-2xl font-semibold mt-1 text-center text-gray-800">
+        Bilişim Teknolojileri Alanı
+      </p>
+      <p className="text-sm font-semibold mt-1 text-center text-gray-800">
+        &copy; Onur Kürkaya
       </p>
       <div className="flex flex-col gap-4 mt-5 max-w-md items-center justify-center mx-auto">
         <button
