@@ -38,16 +38,6 @@ const Panel = () => {
         </button>
         <button
           className={`p-3 border rounded-lg w-full text-xl font-medium transition-all ${
-            aktif === "salavat"
-              ? "bg-green-400 text-white"
-              : "bg-white text-gray-700 hover:bg-gray-100"
-          }`}
-          onClick={() => handleUpdateDurum("salavat")}
-        >
-          SALAVAT-I ŞERİF
-        </button>
-        <button
-          className={`p-3 border rounded-lg w-full text-xl font-medium transition-all ${
             aktif === "mars"
               ? "bg-green-400 text-white"
               : "bg-white text-gray-700 hover:bg-gray-100"
@@ -58,33 +48,33 @@ const Panel = () => {
         </button>
         <button
           className={`p-3 border rounded-lg w-full text-xl font-medium transition-all ${
-            aktif === "nebi"
+            aktif === "ogretmenlergunu"
               ? "bg-green-400 text-white"
               : "bg-white text-gray-700 hover:bg-gray-100"
           }`}
-          onClick={() => handleUpdateDurum("nebi")}
+          onClick={() => handleUpdateDurum("ogretmenlergunu")}
         >
-          MEVLİD-İ NEBİ
+          Öğretmenler Günü
         </button>
         <button
           className={`p-3 border rounded-lg w-full text-xl font-medium transition-all ${
-            aktif === "yanarim"
+            aktif === "fon1"
               ? "bg-green-400 text-white"
               : "bg-white text-gray-700 hover:bg-gray-100"
           }`}
-          onClick={() => handleUpdateDurum("yanarim")}
+          onClick={() => handleUpdateDurum("fon1")}
         >
-          YANARIM YANARIM FON
+          Fon 1
         </button>
         <button
           className={`p-3 border rounded-lg w-full text-xl font-medium transition-all ${
-            aktif === "kirk"
+            aktif === "fon2"
               ? "bg-green-400 text-white"
               : "bg-white text-gray-700 hover:bg-gray-100"
           }`}
-          onClick={() => handleUpdateDurum("kirk")}
+          onClick={() => handleUpdateDurum("fon2")}
         >
-          KIRK YAŞINDASIN
+          Fon 2
         </button>
       </div>
     </div>

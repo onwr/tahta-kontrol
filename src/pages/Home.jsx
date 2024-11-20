@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import logo from "../images/siluet.png";
-import gul from "../images/duz/gul.jpg";
 import { db } from "../Firebase";
 import { doc, onSnapshot } from "firebase/firestore";
-import mars from "../videos/istiklalmars.mp4";
-import salavat from "../videos/salavat.mp4";
-import sinevizyon from "../videos/sinevizyon.mp4";
-import yanarim from "../videos/yanarim.mp4";
-import kirkyas from "../videos/kirkyas.mp4";
+import mars from "../videos/istiklalmars3dk.mp3";
+import ogretmenlergunu from "../videos/ogretmenlergunu.mp4";
+import fon1 from "../videos/Fon1.mp3";
+import fon2 from "../videos/Fon2.mp3";
+
 
 const Home = () => {
   const [videoStatus, setVideoStatus] = useState("giris");
@@ -56,14 +55,14 @@ const Home = () => {
         <div className="min-h-screen flex flex-col items-center justify-center">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
-            style={{ backgroundImage: `url(${gul})` }}
+            style={{ backgroundImage: `url("https://c4.wallpaperflare.com/wallpaper/667/822/427/mustafa-kemal-ataturk-flag-turkey-turkish-wallpaper-preview.jpg")` }}
           />
           <img src={logo} className="z-50" alt="Logo" />
-          <p className="font-semibold z-50 text-9xl mt-5">
-            Mevlid-i Nebi Programı
+          <p className="font-semibold z-50 text-7xl mt-5">
+            Battalgazi Mesleki ve Teknik Anadolu Lisesi
           </p>
           <p className="font-medium z-50 text-6xl mt-2">
-            Tuğba Ekin Bilgin & Huri Görgül
+            Tören Kontrol Uygulaması
           </p>
           <div className="absolute bottom-0 py-2 border-t w-full">
             <p className="text-3xl text-center font-semibold">
@@ -78,16 +77,14 @@ const Home = () => {
           <video
             ref={videoRef}
             src={
-              videoStatus === "salavat"
-                ? salavat
+              videoStatus === "ogretmenlergunu"
+                ? ogretmenlergunu
                 : videoStatus === "mars"
                 ? mars
-                : videoStatus === "nebi"
-                ? sinevizyon
-                : videoStatus === "yanarim"
-                ? yanarim
-                : videoStatus === "kirk"
-                ? kirkyas
+                : videoStatus === "fon1"
+                ? fon1
+                : videoStatus === "fon2"
+                ? fon2
                 : null
             }
             autoPlay
